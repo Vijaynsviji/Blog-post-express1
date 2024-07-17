@@ -1,0 +1,342 @@
+:root{
+    --clr-primary-400: #4daa57;
+    --clr-primary-800: #0d0c22;
+    --clr-primary-600: #1e1e1ee6;
+
+    --clr-neutral-200: #f3f3f4;
+    --clr-neutral-100: #e7e7e9;
+
+
+    --ff-body: "Open Sans", sans-serif;
+    --fs-body: 1rem;
+    --fs-heading : 1.5rem;
+    --fs-hero : 5rem;
+    --fs-nav: 1.15rem;
+
+    --fw-normal : 400;
+    --fw-semibold: 500;
+    --fw-bold: 700;
+
+    --bg-image:  url("/images/image3.jpg");
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+
+
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+
+/* utility classes */
+
+.fs-heading{
+    font-size: var(--fs-heading);
+    font-weight: 700;
+}
+
+.fs-nav{
+    font-size: var(--fs-nav);
+    font-weight: 700;
+}
+
+.fs-hero{
+  font-size: var(--fs-hero);
+  font-weight: 600;
+  margin: 0.5em auto;
+}
+
+
+body{
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0);
+
+
+
+    color: var(--clr-neutral-100);
+    font-family: var(--ff-body);
+
+}
+
+
+
+.container{
+  margin: 0 4em;
+}
+
+.header{
+  padding: 0 4em;
+}
+
+.footer{
+  padding: 2em 4em;
+}
+
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-links .btn{
+  color: var(--clr-primary-800);
+  background-color: var(--clr-neutral-100);
+  padding: 0.25em 1em;
+  border-radius: 3px;
+}
+
+.header .logo{
+  justify-self: self-start;
+}
+
+.btn:hover{
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-200);
+  transition: all 500ms ease;
+}
+
+@media (max-width: 600px){
+  body{
+    background-size: auto;
+    background-image: url("images/image4.jpg");
+  }
+  .footer,.social-media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .container{
+    margin: 0 1em;
+  }
+
+}
+
+img{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-primary-600);
+  border-radius: 1rem;
+}
+
+.img-div{
+  width: 100%;
+  max-height: 60%;
+  overflow: hidden;
+  border-radius: 0.1rem 0.1rem 0 0;
+}
+
+.content{
+  padding: 1em;
+  max-height: 40%;
+  margin-block: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.time-date{
+  display: flex;
+  gap: 2em
+}
+
+.row{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  gap: 1em;
+}
+
+.content .sub{
+  max-width: fit-content;
+  background-color: #4daa57;
+  padding: 0.125em 0.5em;
+  border-radius: 2px;
+}
+
+button{
+  border: none;
+  padding: 0.12em 0.5em;
+  border-radius: 2px;
+  font-weight: 400;
+}
+
+.footer{
+  display: flex;
+  background-color: white;
+  color: var(--clr-primary-800);
+  justify-content: space-between;
+  margin: 2em 0;
+}
+
+.social-media{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2em;
+}
+
+/* add post style */
+
+label,
+textarea {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+textarea{
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  background-color: rgb(22, 22, 22);
+  border: none;
+  color: var(--clr-neutral-200);
+  border-radius: 5px;
+}
+input{
+  padding: 10px;
+  background-color: rgb(22, 22, 22);
+  border: none;
+  color: var(--clr-neutral-200);
+  border-radius: 2px;
+}
+.add-post{
+  background-color:var(--clr-primary-600);
+  color: var(--clr-neutral-100);
+  padding: 2em;
+  border-radius: 4px;
+  margin-top: 2em;
+}
+
+
+.post-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.wrapper h1{
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.wrapper p{
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.add-btn{
+  width: 10%;
+  background-color: var(--clr-primary-800);
+  color: var(--clr-neutral-200);
+  padding: 0.5em 0.75em;
+}
+
+
+/* about page styles */
+.full-height{
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* place-content: center; */
+}
+.flex{
+  width: 50%;
+}
+
+/* article page styles */
+.article{
+  display: flex;
+  align-items: center;
+  margin: 2em auto;
+}
+
+.article-img{
+  width: 60%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.article-content{
+  width: 40%;
+}
+.article-content p{
+  opacity: 80%;
+}
+
+

@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="container add-post">
+        <div class="wrapper post-wrap">
+            <h1>Add Post</h1>
+            <form action="/post" method="post">
+                <div class="form">
+                    <label for="image-link">
+                        <p>Image-link</p>
+                    </label>
+                    <input type="url" name="image" placeholder="Guidance: above (3400 x 750) size">
+                    <label for="category">
+                        <p>category</p>
+                    </label>
+                    <input name="category" type="text">
+                    <label  for="subject">
+                        <p>Subject</p>
+                    </label>
+                    <input name="subject" type="text">
+                    <label for="article">
+                        <p>Article</p>
+                    </label>
+                    <textarea name="article"></textarea>
+                    <div><button class="btn add-btn" type="submit">Add</button></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+   <%- include("partials/footer.ejs") %>

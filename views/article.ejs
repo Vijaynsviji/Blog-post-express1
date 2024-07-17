@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+    <div class="container">
+        
+        <div class="wrapper article">
+            <div class="content article-content">
+                <h1><%= data.subject %></h1>
+                <p><%= data.article %></p>
+            </div>
+            <div class="img-div article-img">
+                <img src="<%= data.image %>" alt="">
+            </div>
+        </div>
+    </div>
+<%- include("partials/footer.ejs") %>

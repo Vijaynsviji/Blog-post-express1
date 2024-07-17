@@ -1,0 +1,61 @@
+<%- include("partials/header.ejs") %>
+    <div class="container">
+        <h1 class="fs-hero">Blog</h1>
+        <div class="wrapper">
+            <div class="row">
+                <!-- <div class="col">
+                    <div class="img-div">
+                        <img src="/images/image.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                        <div>
+                            <p class="sub">Space</p>
+                        </div>
+                        <h2>The leading crypto trends:four trend keep and eye</h2>
+                        <div class="time-date">
+                            <p>04/07/24</p>
+                            <p>7 min</p>
+                            <div>
+                                <form action="#" method="post"><button class="btn" type="submit">delete</button></form>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <% if(locals.data) {%>
+                <% data.forEach((item,index) => { %>
+                    <div class="col">
+                    <div class="img-div">
+                       <a href="/article?number=<%= index %>"><img src="<%= item.image %>" alt="image"></a> 
+                    </div>
+                    <div class="content">
+                        <div>
+                            <p class="sub"><%= item.category %></p>
+                        </div>
+                        <a href="/article?number=<%= index %>"><h2><%= item.subject %> </h2></a>
+                        <div class="time-date">
+                            <p>04/07/24</p>
+                            <p>7 min</p>
+                            <div>
+                                <form action="/del?number=<%= index %>" method="post">
+                                    <button class="btn" type="submit">delete</button>
+                                </form>
+                            </div>
+                            <div>
+                                <form action="/update?number=<%= index %>" method="post">
+                                    <button class="btn" type="submit">Update</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               <%  }); %>
+               <% } %>
+                
+            </div>
+        </div>
+    </div>
+
+    <%- include("partials/footer.ejs") %>
+
+    
